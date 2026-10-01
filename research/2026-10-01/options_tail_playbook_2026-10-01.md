@@ -89,3 +89,55 @@ Payoff multiples are model estimates (Black-Scholes, post-event IV drop assumed)
 - The Ellison pledge source filing.
 - Oracle or Tencent confirmation of the reported deal.
 - Black-Scholes payoff multiples assume a post-event IV and ignore skew and the bid/ask spread. Realized multiples will be lower.
+
+---
+
+## 7. CRWV slot detail (live CBOE chain, Oct 1, 2026, 09:49 ET; stock $88.02)
+
+### Finding: buying now and holding caps the payoff at about 7x
+
+If out-of-the-money Nov 20 options are bought today and held through the ~Nov 11 report, six weeks of decay limit the result.
+
+| Contract | Mid | −40% move | −30% move | +30% move | +40% move | Flat |
+|---|---|---|---|---|---|---|
+| 70P | $2.83 | 6.1x | 3.0x | — | — | 0 |
+| 65P | $1.76 | 6.9x | 2.5x | — | — | 0 |
+| 115C | $3.38 | — | — | 1.2x | 2.9x | 0 |
+| 130C | $1.80 | — | — | — | 1.2x | 0 |
+
+Out-of-the-money calls also carry higher implied volatility (0.83–0.86) than the puts (0.80).
+
+### Structure for the $1M slot
+
+1. **Starter now (~15%, about $150k): put-side only.**
+   - Nov 20 $70P: mid ~$2.83, open interest 7,819.
+   - Nov 20 $65P: mid ~$1.76, open interest 3,644.
+   - Purpose: buy cheap volatility (IV rank about 13) and protect against the report date slipping.
+   - Keep each strike to 20% or less of its open interest.
+2. **Main position (~85%): one or two days before the company-confirmed date.**
+   - Use the Nov 13 weekly, which is the first expiry after an assumed Nov 11 report. It is already listed but has no open interest yet. Use Nov 20 as the second expiry.
+   - Strikes 25–35% out of the money. Weight about 60% puts and 40% calls.
+   - Model, with options bought the day before: 25% OTM put ~16x on a −30% move; 25% OTM call ~15x on a +40% move.
+3. **Entry condition.** The event-only implied move must be about 15% or less, against a historical average of 15–16%. If the straddle prices more than about 18%, cut the size in half.
+4. **Exits.**
+   - Sell ⅓–½ at 3–5x.
+   - Close everything the morning after the report unless deep in the money.
+   - No adding after the print.
+5. **Change the plan if any of these happen:**
+   - CRWV moves 20% or more before the report: re-strike, and drop the side that is now near the money.
+   - A new equity raise or a large DDTL draw is announced: this supports the put side.
+   - The report is confirmed for a date other than ~Nov 11: re-map the expiries.
+
+### Why puts get 60%
+
+- 4 of the last 6 reports fell 11–21%.
+- Interest expense is 25% of revenue, and the Q3 guide implies interest of 3.5–4.5x adjusted operating income.
+- $10.6B of principal matures by end-2027.
+- Form 144 insider sale notices of about $45M+ were filed Sep 29–30.
+
+### The case for the upside tail
+
+- Short interest is 17.6% of float.
+- The stock rose 19% after the Aug report.
+- The Q3 revenue guide of $3.45–3.60B is about 37% above Q2.
+- Contracted power has reached 4.2 GW, and new capacity is being signed at higher prices.
